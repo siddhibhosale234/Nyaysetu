@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+
+import Disclaimer from './index.jsx';
 import './App.css';
+import { Login } from './LoginForm';
+// import { LawyerRegistration } from './LawyerRegistration';
+// import { LawyerRegistration1 } from './LawyerRegistration1';
+// import {BrowserRouter,Route,Routes} from 'react-router-dom'
+// import { OurService } from './OurServices';
+// import { RoleSelection } from './RoleSelection';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LawyerRegistration/>}> </Route>
+        <Route path='/signup' element={<LawyerRegistration1/>}> </Route>
+      </Routes>
+      </BrowserRouter> */}
+      {/* <OurService/> */}
+      {/* <RoleSelection/> */}
+      {/* <Login/> */}
+      <Disclaimer/>
     </div>
   );
 }

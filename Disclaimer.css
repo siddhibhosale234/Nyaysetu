@@ -1,0 +1,127 @@
+/* Base Container */
+.disclaimer-container {
+  height: 400px; /* Restored original height */
+  max-width: 760px;
+  margin: 60px auto;
+  padding: 30px 32px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 3px 3px 30px #1a237e;
+  border: 1px solid #f5f5f5;
+  position: relative;
+  font-family: 'Merriweather', serif;
+  animation: fadeSlide 0.6s ease-out;
+
+  /* Enable vertical scrolling */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+
+/* Animations */
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.disclaimer-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1a237e;
+  margin-bottom: 20px;
+  font-weight: 600;
+  
+  /* animation: floatIn 1.8s; */
+  /* animation: blink 1.2s linear infinite, fadeIn 1.2s; */
+}
+
+/* Icon Header */
+.icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  animation: floatIn 1.8s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.warning-icon {
+  color: #151226;
+  font-size: 36px;
+  filter: drop-shadow(0 0 6px #ffc107);
+   animation: blink 1.2s linear infinite, bounce 1.5s infinite alternate;
+    filter: drop-shadow(0 0 8px #d18e29);
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+/* @keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+} */
+
+.disclaimer-heading {
+  font-size: 1.6rem;
+  color: #1a237e;
+  font-weight: 700;
+  text-shadow: 0 0 6px #fff3e0;
+  animation: blink 1.2s linear infinite, fadeIn 1.2s;
+}
+
+/* Content */
+.content-section {
+  background: #a3c9fc;
+  border-left: 4px solid #024cb3;
+  padding: 18px 22px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  line-height: 1.65;
+  font-size: 1.05rem;
+  color: #0e0e0e;
+  box-shadow: 0 2px 12px rgba(255, 193, 7, 0.15);
+  animation: floatIn 1.8s;
+}
+@keyframes floatIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.content-section p {
+  margin-top: 10px;
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.close-icon:hover {
+  color: #e53935;
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Checkbox */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #12fd26;
+}
