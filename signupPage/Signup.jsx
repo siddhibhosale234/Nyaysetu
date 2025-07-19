@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Signup.css'; // Optional: move styles here if needed
-
+import {useNavigate} from 'react-router-dom'
 const Signup = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,6 +27,13 @@ const Signup = () => {
       setError('');
       alert('Registration successful!');
       // You can add actual logic to send the data to your backend here
+    }
+
+    if(formData.name.includes("lawyer")){
+      navigate("/lawyer1")
+    }
+    else if(formData.name.includes("client")){
+      navigate("/login")
     }
   };
 
@@ -73,7 +81,7 @@ const Signup = () => {
 
         <button type="submit">Register</button>
        <p className="login-text">
-  Already have an account? <button onClick={() => alert('Go to login')} className="link-button">Login</button>
+  Already have an account? <button onClick={() => navigate("/login")} className="link-button">Login</button>
 </p>
 
       </form>
