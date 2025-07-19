@@ -12,7 +12,7 @@ export function LawyerRegistration(){
             <input type='number' placeholder='Enter your Age' required id='age'/>
             <input type='date' placeholder='Enter your  Date of Birth' required id='DOB'/>
             <input type='email' placeholder='Enter your Email ID' required id='email'/>
-            <button type="submit" onClick={()=>{navigate('/signup')}}>Next</button>
+            <button type="submit" onClick={()=>{navigate('/lawyer2')}}>Next</button>
        </div>
     </div>
     </>);
