@@ -1,15 +1,16 @@
 import './Disclaimer.css';
 import { FaExclamationTriangle, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 
 function Disclaimer() {
   const [visible, setVisible] = useState(true);
-
+  const navigate=useNavigate();
   if (!visible) return null;
 
   return (
     <div className="disclaimer-container">
-      <FaTimes className="close-icon"size={20}title="Close"onClick={() => setVisible(false)}
+      <FaTimes className="close-icon"size={20}title="Close"onClick={() => navigate("/choose")}
       />
 <div className="upper">
        <img src="./Nyaysetu logo.png" alt="" />
