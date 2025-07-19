@@ -1,6 +1,8 @@
 import a from './NyaysetuLogo.png'
 import './LawyerRegistration1.css'
+import {useNavigate} from 'react-router-dom';
 export function LawyerRegistration1(){
+    const navigate=useNavigate();
     return(<>
     <div className="background">
        <div id='login'>
@@ -17,39 +19,39 @@ export function LawyerRegistration1(){
             </select>
             <textarea name="" id="" placeholder='Enter your Experience'></textarea>
             <select>
-                <option value="" disabled selected hidden>Legal Specialization</option>
-                <option value="">Civil Law</option>
-                <option value="">Criminal Law</option>
-                <option value="">Family Law</option>
-                <option value="">Accident Claims</option>
-                <option value="">Labour Law</option>
-                <option value="">Consumer Protection</option>
-                <option value="">Cooperative Society</option>
-                <option value="">Real Estate/RERA</option>
-                <option value="">Corporate Law</option>
-                <option value="">Intellectual Property</option>
-                <option value="">Taxation</option>
-                <option value="">Service Law</option>
-                <option value="">Cyber Law</option>
-                <option value="">Banking and Finance Law</option>
-                <option value="">Arbitration and Mediation</option>
-                <option value="">Constitutional Law and Writs</option>
-                <option value="">Environmental Law(NGT)</option>
-                <option value="">IT/Tech Legal</option>
+                <option value="Legal Specialization" disabled selected hidden>Legal Specialization</option>
+                <option value="Civil Law">Civil Law</option>
+                <option value="Criminal Law">Criminal Law</option>
+                <option value="Family Law">Family Law</option>
+                <option value="Accident Claims">Accident Claims</option>
+                <option value="Labour Law">Labour Law</option>
+                <option value="Consumer Protection">Consumer Protection</option>
+                <option value="Cooperative Society">Cooperative Society</option>
+                <option value="Real Estate">Real Estate/RERA</option>
+                <option value="Corporate Law">Corporate Law</option>
+                <option value="Intellectual Property">Intellectual Property</option>
+                <option value="Taxation">Taxation</option>
+                <option value="Service Law">Service Law</option>
+                <option value="Cyber Law">Cyber Law</option>
+                <option value="Banking and Finance Law">Banking and Finance Law</option>
+                <option value="Arbitration and Mediation">Arbitration and Mediation</option>
+                <option value="Constitutional Law and Writs">Constitutional Law and Writs</option>
+                <option value="Environmental Law">Environmental Law(NGT)</option>
+                <option value="IT/Tech Legal">IT/Tech Legal</option>
             </select>
             <select name="" id="">
-                <option value="" disabled selected hidden>Court Level</option>
-                <option value="">Taluka Court/Junior Civil Court</option>
-                <option value="">District Court/Sessions Court</option>
-                <option value="">Family Court</option>
-                <option value="">Labour Court/Industrial Tribunal</option>
-                <option value="">Consumer Court(District/State/National)</option>
-                <option value="">Cooperative Court</option>
-                <option value="">RERA Tribunal</option>
-                <option value="">High Court</option>
-                <option value="">Supreme Court of India</option>
-                <option value="">City Civil Court</option>
-                <option value="">City Sessions Court</option>
+                <option value="Court Level" disabled selected hidden>Court Level</option>
+                <option value="Taluka Court">Taluka Court/Junior Civil Court</option>
+                <option value="District Court">District Court/Sessions Court</option>
+                <option value="Family Court">Family Court</option>
+                <option value="Labour Court">Labour Court/Industrial Tribunal</option>
+                <option value="Consumer Court">Consumer Court(District/State/National)</option>
+                <option value="Cooperative Court">Cooperative Court</option>
+                <option value="RERA Tribunal">RERA Tribunal</option>
+                <option value="High Court">High Court</option>
+                <option value="Supreme Court">Supreme Court of India</option>
+                <option value="City Civil">City Civil Court</option>
+                <option value="City Sessions">City Sessions Court</option>
             </select>
             </div>
             <div style={{display:"flex", gap:"30px", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
@@ -64,7 +66,7 @@ export function LawyerRegistration1(){
             </select>
             </div>
             </div>
-            <button type="submit">Done</button>
+            <button type="submit" onClick(()=>{navigate("/login")})>Done</button>
        </div>
     </div>
     </>);
